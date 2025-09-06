@@ -1,0 +1,2 @@
+ALTER TABLE items
+ADD COLUMN quantity INTEGER NOT NULL CHECK (quantity > -1) DEFAULT 0;
