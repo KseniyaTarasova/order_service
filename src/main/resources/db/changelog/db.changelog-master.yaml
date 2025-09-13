@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/order_V001_initial.sql
+  - include:
+      file: db/changelog/changeset/order_V002_add_quantity.sql
