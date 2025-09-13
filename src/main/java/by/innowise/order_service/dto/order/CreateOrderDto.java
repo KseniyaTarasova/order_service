@@ -1,16 +1,15 @@
-package by.innowise.order_service.dto;
+package by.innowise.order_service.dto.order;
 
-import jakarta.validation.constraints.NotBlank;
+import by.innowise.order_service.dto.OrderItemDto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
-public record OrderRequestDto(
+public record CreateOrderDto(
         @NotNull(message = "User id must not be null")
         Long userId,
-        @NotBlank(message = "Status must not be empty")
-        String status,
+
         @NotEmpty(message = "Order items must not be empty")
         List<OrderItemDto> orderItems
 ) {
