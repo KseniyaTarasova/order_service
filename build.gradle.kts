@@ -41,6 +41,11 @@ dependencies {
     implementation("org.liquibase:liquibase-core")
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.boot:spring-boot-testcontainers")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.wiremock:wiremock:3.13.1")
+    testImplementation("org.testcontainers:wiremock:1.20.4")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

@@ -48,7 +48,7 @@ public class Order {
     private LocalDateTime creationDate;
 
     @OneToMany(mappedBy = "order", orphanRemoval = true, cascade = CascadeType.ALL)
-    private final List<OrderItem> orderItems = new ArrayList<>();
+    private List<OrderItem> orderItems = new ArrayList<>();
 
     @Transient
     private BigDecimal totalCost;

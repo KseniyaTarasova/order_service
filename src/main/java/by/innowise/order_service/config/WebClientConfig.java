@@ -27,7 +27,7 @@ public class WebClientConfig {
     @Bean
     public WebClient userServiceWebClient(WebClient.Builder webClientBuilder) {
         return webClientBuilder
-                .baseUrl(String.format("http://%s:%s/api/v1/", userServiceHost, userServicePort))
+                .baseUrl(String.format("http://%s:%s/", userServiceHost, userServicePort))
                 .clientConnector(new ReactorClientHttpConnector(
                         HttpClient.create()
                                 .responseTimeout(Duration.ofMillis(TIMEOUT))
